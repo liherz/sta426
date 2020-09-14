@@ -1,14 +1,6 @@
 <!-- # sta426 -->
 
----
-title: "Exercises in STA426"
-author: Lisa Herzog
-output: html_document
----
-
-
-
-This repository contains solutions to the exercises in **STA426**.
+**_This repository contains solutions to the exercises in STA426._**
 
 
 # Some commands for working in Markdown
