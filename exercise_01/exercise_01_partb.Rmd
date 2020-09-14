@@ -1,0 +1,39 @@
+---
+title: "Exercise 1 (part b)"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+3. Create an HTML document that samples 100 values from a log-normal
+distribution (say, mu=1, sigma=.25); create a histogram of the distribution and
+the distribution on the log scale; report the mean and variance of the sample in
+line in the text. In general, do not just dump the R code and plots in the HTML
+document; break your exercises into sections with headings, add some text
+and make it readable.
+
+
+**Solution**
+
+```{r, echo = TRUE, include = TRUE} 
+
+# specify values
+n <- 100
+mu <- 1
+sigma <- 0.25
+
+# sample from log normal
+lnorm <- rlnorm(n, meanlog = mu, sdlog = sigma)
+
+# Histogram of the distribution
+par(mfrow = c(1,2))
+hist(lnorm, main = "Lognormal distribution", col = "lightgreen")
+hist(log(lnorm), main = "Log(lognormal distribution)", col = "lightblue")
+
+```
+
+
+The figure summarizes two histograms, one of the lognormal distribution (with mean $\mu=$ `r mu` and standard deviation $\sigma=$ `r sd`) and one of the lognormal distribution on the log scale (with mean $\mu=$ `r log(mu)` and standard deviation $\sigma=$ `r log(sd)`).
