@@ -1,5 +1,7 @@
 ---
 title: "Exercise 1 (part b)"
+author: Lisa Herzog
+date: 14.09.2020
 output: html_document
 ---
 
@@ -28,12 +30,12 @@ sigma <- 0.25
 # sample from log normal
 lnorm <- rlnorm(n, meanlog = mu, sdlog = sigma)
 
-# Histogram of the distribution
+# Histograms of the distributions
 par(mfrow = c(1,2))
-hist(lnorm, main = "Lognormal distribution", col = "lightgreen")
-hist(log(lnorm), main = "Log(lognormal distribution)", col = "lightblue")
+hist(lnorm, main = "Lognormal distribution", xlab = "x", col = "lightgreen")
+hist(log(lnorm), main = "Lognormal distribution (log scale)", xlab = "log(x)", col = "lightblue")
 
 ```
 
 
-The figure summarizes two histograms, one of the lognormal distribution (with mean $\mu=$ `r mu` and standard deviation $\sigma=$ `r sd`) and one of the lognormal distribution on the log scale (with mean $\mu=$ `r log(mu)` and standard deviation $\sigma=$ `r log(sd)`).
+The histograms summarize the lognormal distribution once on the original scale (with mean $\mu=$ `r mu` and standard deviation $\sigma=$ `r sigma`) and once on the log scale (with mean $\mu=$ `r round(log(mu), digits = 2)` and standard deviation $\sigma=$ `r round(log(sigma), digits = 2)`).
